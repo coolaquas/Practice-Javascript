@@ -46,3 +46,5 @@ class User {
 
 let user1 = new User("paul", 18);
 user1.getUserData();
+
+console.log("test");
