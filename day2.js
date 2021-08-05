@@ -51,6 +51,6 @@
 //Solution :
 // const stringManipulation = (str) =>
 //   str.split(" ")[0] === "New!" ? str : "New! " + str;
-const stringManipulation = (str) =>
-  str.indexOf("New!") === 0 ? str : "New! " + str;
-console.log(stringManipulation("New! abcdsss Testing string"));
+// const stringManipulation = (str) =>
+//   str.indexOf("New!") === 0 ? str : "New! " + str;
+// console.log(stringManipulation("New! abcdsss Testing string"));
