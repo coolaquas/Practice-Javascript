@@ -23,9 +23,16 @@
 //Problem :
 // program to findout given two numbers which one is near to 100
 //Solution :
-const near_100 = (num1, num2) => {
-  const comp1 = num1 > 100 ? num1 - 100 : 100 - num1;
-  const comp2 = num2 > 100 ? num2 - 100 : 100 - num2;
-  return comp1 > comp2 ? num2 : num1;
-};
-console.log(near_100(120, 90));
+// const near_100 = (num1, num2) =>
+//   Math.abs(100 - num1) <= Math.abs(100 - num2) ? num1 : num2;
+// console.log(near_100(110, 90));
+
+//Problem :
+// program to check a given string contains 2 to 4 occurrences of a specified charecter
+//Solution :
+// const check_occurance = (str, char) =>
+//   countChars(str, char) >= 2 && countChars(str, char) <= 4;
+// const countChars = (str, char) =>
+//   str.split("").filter((ch) => ch === char).length;
+
+// console.log(check_occurance("mom", "m"));
