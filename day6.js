@@ -13,17 +13,25 @@
 //Problem :
 // program to convert an amount into notes and coins
 //Solution :
-const amountTocoins = (amount, coins) => {
-  if (amount === 0) {
-    return [];
-  } else {
-    if (amount >= coins[0]) {
-      left = amount - coins[0];
-      return [coins[0]].concat(amountTocoins(left, coins));
-    } else {
-      coins.shift();
-      return amountTocoins(amount, coins);
-    }
-  }
-};
-console.log(amountTocoins(46, [25, 10, 5, 2, 1]));
+// const amountTocoins = (amount, coins = [25, 10, 5, 2, 1]) => {
+//   const totalCoins = [];
+//   for (let i = 0; i < coins.length; i++) {
+//     const thisCoinNum = Math.floor(amount / coins[i]);
+//     for (let y = 0; y < thisCoinNum; y++) {
+//       totalCoins.push(coins[i]);
+//     }
+//     amount -= coins[i] * thisCoinNum;
+//   }
+//   return totalCoins;
+// };
+// console.log(amountTocoins(1150, [2000, 500, 100, 50, 20, 10, 5, 1]));
+
+//Problem :
+// program to extract unique charecter from a string
+//Solution :
+// const alphabatical_string = (str) =>
+//   str
+//     .split("")
+//     .filter((item, index, arr) => arr.slice(index + 1).indexOf(item) === -1);
+// const alphabatical_string = (str) => [...new Set(str.split(""))];
+// console.log(alphabatical_string("abcccdd"));
