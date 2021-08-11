@@ -39,8 +39,8 @@
 //Problem :
 // program to find the first non repeatated charecter
 //Solution :
-const alphabatical_string = (str) =>
-  str
-    .split("")
-    .filter((x) => str.split("").filter((ch) => ch === x).length === 1)[0];
-console.log(alphabatical_string("abacccdde"));
+// const alphabatical_string = (str) =>
+//   str
+//     .split("")
+//     .filter((x, index, arr) => arr.filter((ch) => ch === x).length === 1)[0];
+// console.log(alphabatical_string("abacccdde"));
