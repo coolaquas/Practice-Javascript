@@ -14,11 +14,11 @@
 //Problem :
 // program to find the point in football championship
 // Solution :
-const points = (games) =>
-  games.reduce((acc, game) => {
-    const [x, y] = game.split(":");
-    return (acc += x > y ? 3 : x === y ? 1 : 0);
-  }, 0);
-console.log(
-  points(["1:0", "2:0", "3:0", "4:0", "2:1", "3:1", "4:1", "3:2", "4:2", "4:5"])
-);
+// const points = (games) =>
+//   games.reduce((acc, game) => {
+//     const [x, y] = game.split(":");
+//     return (acc += x > y ? 3 : x === y ? 1 : 0);
+//   }, 0);
+// console.log(
+//   points(["1:0", "2:0", "3:0", "4:0", "2:1", "3:1", "4:1", "3:2", "4:2", "4:5"])
+// );
