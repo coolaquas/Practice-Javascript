@@ -91,21 +91,39 @@ const people = [
 //Solution :
 const average_income_of_all_people = (arr) =>
   arr.reduce((acc, item) => acc + parseInt(item.salary), 0) / arr.length;
-console.log(average_income_of_all_people(people));
+// console.log(average_income_of_all_people(people));
 
 // 2) Who are the people that are currently older than 30?
 //Solution :
 const over_30_people = (arr) =>
   arr.filter(
-    (x) =>
-      parseInt(
-        (new Date() - new Date(x.DOB)) / (1000 * 60 * 60 * 24 * 30 * 12)
-      ) > 30
+    (x) => new Date().getFullYear() - new Date(x.DOB).getFullYear() > 30
   );
-console.log(over_30_people(people));
+// console.log(over_30_people(people).map((x) => `${x.firstName} ${x.lastName}`));
 
 // 3) Get a list of the people's full name (firstName and lastName).
+//Solution :
+const full_name = (arr) =>
+  arr.map((person) => ({
+    ...person,
+    full_name: `${person.firstName} ${person.lastName}`,
+  }));
+// console.log(full_name(people));
 
 // 4) Get a list of people in the array ordered from youngest to oldest.
+//Solution :
+const sort_by_age = (arr) =>
+  arr.sort((a, b) => new Date(b.DOB) - new Date(a.DOB));
+// console.log(sort_by_age(people));
 
 // 5) How many people are there in each department?
+//Solution :
+const cont_member_in_dept = (arr) =>
+  arr.reduce(
+    (acc, person) => ({
+      ...acc,
+      [person.department]: acc[person.department] + 1 || 1,
+    }),
+    {}
+  );
+// console.log(cont_member_in_dept(people));
