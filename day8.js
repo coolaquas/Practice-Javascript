@@ -103,6 +103,7 @@ const over_30_people = (arr) =>
       ) > 30
   );
 console.log(over_30_people(people));
+
 // 3) Get a list of the people's full name (firstName and lastName).
 
 // 4) Get a list of people in the array ordered from youngest to oldest.
