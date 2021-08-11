@@ -35,3 +35,12 @@
 //     .filter((item, index, arr) => arr.slice(index + 1).indexOf(item) === -1);
 // const alphabatical_string = (str) => [...new Set(str.split(""))];
 // console.log(alphabatical_string("abcccdd"));
+
+//Problem :
+// program to find the first non repeatated charecter
+//Solution :
+const alphabatical_string = (str) =>
+  str
+    .split("")
+    .filter((x) => str.split("").filter((ch) => ch === x).length === 1)[0];
+console.log(alphabatical_string("abacccdde"));
