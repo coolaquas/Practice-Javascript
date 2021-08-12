@@ -84,7 +84,10 @@ const find_first_commentier = (arr, commenterId) =>
 
 // 3) Which user commented 'OK great thanks'?
 const find_commentier = (str) =>
-  users.find(() => comments.find((element) => element.text === str).userId);
+  users.find(
+    (user) =>
+      user.id === comments.find((element) => element.text === str).userId
+  );
 // console.log(find_commentier("OK great thanks"));
 
 // 4) Add the user's first and last name to each comment in the comments array
