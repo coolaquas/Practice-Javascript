@@ -86,3 +86,20 @@ const find_first_commentier = (arr, commenterId) =>
 const find_commentier = (str) =>
   users.find(() => comments.find((element) => element.text === str).userId);
 // console.log(find_commentier("OK great thanks"));
+
+// 4) Add the user's first and last name to each comment in the comments array
+const add_userDetails = () =>
+  comments.map((comment) => {
+    const { firstName, lastName } = users.find(
+      (user) => user.id === comment.userId
+    );
+    return { ...comment, firstName, lastName };
+  });
+// console.log(add_userDetails());
+
+// 5) Get a list of the users who haven't commented
+const user_notCommented = () =>
+  users.filter(
+    (user) => comments.findIndex((comment) => comment.userId === user.id) === -1
+  );
+// console.log(user_notCommented());
