@@ -41,5 +41,12 @@ Exercise 04
 let count = para.innerText.split(" ").length;
 const countElem = document.createElement("div");
 countElem.innerText = `${count} words`;
-document.body.insertBefore(countElem,para)
+document.body.insertBefore(countElem, para);
 /*
+  Exercise 05
+  -----------
+  Replace all question marks (?) with thinking faces (🤔) and exclamation marks (!) with astonished faces (😲) 
+*/
+Array.from(document.querySelectorAll("p")).forEach((p) => {
+  p.innerHTML = p.innerHTML.replace(/\?/g, "🤔").replace(/\!/g, "😲");
+});
