@@ -32,3 +32,14 @@ document.body.appendChild(link);
 */
 // para.innerHTML = para.innerHTML.split(".").join(".</p><p>")+"</p>"
 para.innerHTML = para.innerHTML.split(/\.[^|<]/g).join(".</p><p>") + "</p>";
+/* 
+Exercise 04
+  -----------
+  Count the number of words in the paragraph tag and display the count afer the heading.
+  You can assume that all words are separated by one singular whitespace.
+*/
+let count = para.innerText.split(" ").length;
+const countElem = document.createElement("div");
+countElem.innerText = `${count} words`;
+document.body.insertBefore(countElem,para)
+/*
