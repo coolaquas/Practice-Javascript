@@ -12,3 +12,14 @@ para.innerHTML = para.innerText
     e.length > 8 ? `<span style="background-color: yellow">${e}</span>` : e
   )
   .join(" ");
+
+/*
+  Exercise 02
+  -----------
+  Add a link back to the source of the text after the paragraph tag.
+  (https://forcemipsum.com/)
+*/
+const link = document.createElement("a");
+link.href = "https://forcemipsum.com/";
+link.innerText = "Text generated from Focem Ipsum";
+document.body.appendChild(link);
