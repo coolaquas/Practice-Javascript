@@ -4,7 +4,18 @@
   ------------
   Add a label to each of the input fields: username, password, confirm password
 */
-
+const as1 = (name) =>
+  document
+    .getElementById(name)
+    .insertAdjacentHTML(
+      "beforebegin",
+      `<label for=${name}>${
+        name.charAt(0).toUpperCase() + name.slice(1)
+      } : </label>`
+    );
+["username", "password", "confirm"].forEach((element) => {
+  as1(element);
+});
 /*
   Exercise 02
   -----------
