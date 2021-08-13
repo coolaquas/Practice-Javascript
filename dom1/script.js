@@ -23,3 +23,12 @@ const link = document.createElement("a");
 link.href = "https://forcemipsum.com/";
 link.innerText = "Text generated from Focem Ipsum";
 document.body.appendChild(link);
+
+/*
+  Exercise 03
+  -----------
+  Split each new sentence on to a separate line in the paragraph text.
+  A sentence can be assumed to be a string of text terminated with a period (.)
+*/
+// para.innerHTML = para.innerHTML.split(".").join(".</p><p>")+"</p>"
+para.innerHTML = para.innerHTML.split(/\.[^|<]/g).join(".</p><p>") + "</p>";
