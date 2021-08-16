@@ -57,14 +57,11 @@ const users = [
  * Check whether every email address in the list of users is valid (get a true or false value)
  */
 const checkEmail = (arr) =>
-  arr?.filter(
-    (x) =>
-      !x.email.match(
-        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-      )
-  ).length > 0
-    ? false
-    : true;
+  arr?.every((x) =>
+    x.email.match(
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    )
+  );
 
 // console.log(checkEmail(users));
 
@@ -83,15 +80,26 @@ const checkClassANetwork = (arr) =>
  *
  * Find the position in the array of the first  user object that has a Class B IP address
  */
+const findclassB = (arr) =>
+  arr.findIndex(
+    (x, idx) =>
+      x.ip_address.split(".")[0] > 127 && x.ip_address.split(".")[0] <= 191
+  );
+// console.log(findclassB(users));
 
 /**
  * Exercise 04
  *
  * Find the user object that has the 'soundcloud' email address
  */
+const specDomainEmail = (arr) =>
+  arr.find((x) => x.email.includes("soundcloud"));
+// console.log(specDomainEmail(users));
 
 /**
  * Exercise 05
  *
  * Replace all the items in the array with a string value of 'deleted'
  */
+const deleted = (arr) => arr.fill("deleted");
+console.log(deleted(users));
