@@ -56,6 +56,17 @@ const users = [
  *
  * Check whether every email address in the list of users is valid (get a true or false value)
  */
+const checkEmail = (arr) =>
+  arr?.filter(
+    (x) =>
+      !x.email.match(
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+      )
+  ).length > 0
+    ? false
+    : true;
+
+// console.log(checkEmail(users));
 
 /**
  * Exercise 02
@@ -63,6 +74,9 @@ const users = [
  * Find out how many users have an IP address in a Class A network
  * https://en.wikipedia.org/wiki/Classful_network
  */
+const checkClassANetwork = (arr) =>
+  arr?.filter((x) => x.ip_address.split(".")[0] <= 127);
+// console.log(checkClassANetwork(users));
 
 /**
  * Exercise 03
