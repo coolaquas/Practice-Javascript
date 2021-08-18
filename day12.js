@@ -202,4 +202,4 @@ const allfriendsWithCondition = (arr, ageCond, bal) =>
     .map(({ friends }) => friends)
     .flat()
     .map(({ name }) => name);
-console.log(allfriendsWithCondition(accounts, 30, 1500));
+//console.log(allfriendsWithCondition(accounts, 30, 1500));
