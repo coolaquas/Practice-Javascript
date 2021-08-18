@@ -19,6 +19,8 @@ console.log(ex3.match(/\$\d{1,5}\.\d{1,2}/g)[0]);
 
 // Exercise 04
 // Using a regex pattern, find the telephone number contained within the ex4 string.
+console.log(ex4.match(/(\d{3,4}\s?){3}/g)[0]);
 
 // Exercise 05
 // Using a regex pattern, find the email address contained within the ex5 string.
+console.log(ex5.match(/\S+\S+@+\S+\.+\S+/g));
