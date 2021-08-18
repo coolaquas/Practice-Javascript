@@ -17,6 +17,8 @@ console.log(ex3.match(/\d+/g));
 
 // Exercise 04
 // Using a regex, find out the name contained in the string (after the semicolon :)
+console.log(ex4.match(/:\s+(\w+)/)[1]);
 
 // Exercise 05
 // Using a regex, find the number of contractions used in the string.
+console.log(ex5.match(/'[dstm]|'[r|ve]/g).length);
