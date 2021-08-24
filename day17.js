@@ -90,8 +90,37 @@ const sol8 = () => {
     input: process.stdin,
     output: process.stdout,
   });
-  userInput.question(rand + "Please enter a number between 1 to 10 : ", (ans) =>
+  userInput.question("Please enter a number between 1 to 10 : ", (ans) =>
     console.log(rand.toString() === ans ? "Good Work" : "Not matched")
   );
 };
-sol8();
+// sol8();
+
+/*Write a JavaScript program to calculate days left until next Christmas.
+ */
+//Solution
+const sol9 = () => {
+  let today = Math.floor(
+    (Date.now() - Date.parse(new Date().getFullYear(), 0, 0)) / 86400000
+  );
+  if (today <= 358) {
+    console.log("Remaining days for X-mas is " + (359 - today));
+  } else if (today >= 360) {
+    console.log("Remaining days for X-mas is " + (365 - today + 359));
+  } else {
+    console.log("Today is x max");
+  }
+};
+// sol9();
+
+/*Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit
+ */
+//Solution
+const sol10 = (temp, type) => {
+  if (type === "celc") {
+    return (temp * 9) / 5 + 32;
+  } else {
+    return (temp - 32) * (5 / 9);
+  }
+};
+// console.log(sol10(212, "far"));
